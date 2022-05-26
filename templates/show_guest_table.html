@@ -1,24 +1,26 @@
 {% extends 'base.html' %}
-{% block title %}{{ name }}{% endblock %}
 
 
 {% block content %}
+
     <table class="table table-hover table-dark">
         <thead>
         <tr>
-            <th scope="col">id</th>
-            <th scope="col">Full name</th>
+            <th scope="col">guest id</th>
+            <th scope="col">guest name</th>
         </tr>
         </thead>
 
-        {% for teacher in teacher_list %}
+        {% for guest in guest_list %}
             <tr>
                 <td>
-                    {{ teacher.teacher_id }}
+                    {{ guest.guest_id }}
                 </td>
                 <td>
-                    {{ teacher.teacher_name }}
+                    {{ guest.guest_name }}
                 </td>
             </tr>
+
         {% endfor %}
+    </table>
 {% endblock %}

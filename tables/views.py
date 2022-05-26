@@ -1,15 +1,15 @@
 from django.shortcuts import render
 
-from tables.models import Student, Teacher
+from tables.models import Hotel, Guest
 
 
-def show_student_table(request):  # Displays students table
-    student_list = Student.objects.all()
-    return render(request, 'show_student_table.html',
-                  {'student_list': student_list})
+def show_hotel_table(request):  # Displays hotel table
+    hotel_list = Hotel.objects.all()
+    return render(request, 'show_hotel_table.html',
+                  {'hotel_list': hotel_list})
 
 
-def show_teacher_table(request):  # Displays teachers table
-    teacher_list = Teacher.objects.all()
-    return render(request, 'show_teacher_table.html',
-                  {'teacher_list': teacher_list})
+def show_guest_table(request):  # Displays guest table
+    guest_list = Guest.objects.all()
+    return render(request, 'show_guest_table.html',
+                  {'guest_list': guest_list})
