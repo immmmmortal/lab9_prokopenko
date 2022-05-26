@@ -16,10 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from tables.views import show_guest_table, show_hotel_table
+from tables.views import show_citizen_table, show_income_statement_table
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', show_guest_table),
-    path('show_hotel_table/', show_hotel_table)
+    path('', show_citizen_table, ),
+    path('show_income_statement_table/', show_income_statement_table)
 ]

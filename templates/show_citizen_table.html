@@ -6,18 +6,18 @@
     <table class="table table-hover table-dark">
         <thead>
         <tr>
-            <th scope="col">guest id</th>
-            <th scope="col">guest name</th>
+            <th scope="col">citizen id</th>
+            <th scope="col">citizen name</th>
         </tr>
         </thead>
 
-        {% for guest in guest_list %}
+        {% for citizen in citizen_list %}
             <tr>
                 <td>
-                    {{ guest.guest_id }}
+                    {{ citizen.citizen_id }}
                 </td>
                 <td>
-                    {{ guest.guest_name }}
+                    {{ citizen.citizen_name }}
                 </td>
             </tr>
 

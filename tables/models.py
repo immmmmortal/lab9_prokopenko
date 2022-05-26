@@ -3,11 +3,17 @@ from django.db import models
 
 # Create your models here.
 
-class Hotel(models.Model):
-    hotel_id = models.BigAutoField(primary_key=True)
-    hotel_name = models.TextField()
+class Citizen(models.Model):
+    citizen_id = models.BigAutoField(primary_key=True)
+    citizen_name = models.TextField()
+
+    def __str__(self):
+        return str(self.citizen_id)
 
 
-class Guest(models.Model):
-    guest_id = models.BigAutoField(primary_key=True)
-    guest_name = models.TextField()
+class IncomeStatement(models.Model):
+    income_statement_id = models.BigAutoField(primary_key=True)
+    citizen_id = models.ForeignKey('Citizen', on_delete=models.CASCADE)
+    income = models.IntegerField()
+    expense = models.IntegerField()
+    is_citizen_suspect = models.BooleanField(default=False)

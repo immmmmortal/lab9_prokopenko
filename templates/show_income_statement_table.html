@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    <table class="table table-hover table-dark">
+        <thead>
+        <tr>
+            <th scope="col">income statement id</th>
+            <th scope="col">citizen id</th>
+            <th scope="col">income</th>
+            <th scope="col">expense</th>
+            <th scope="col">is citizen suspect</th>
+        </tr>
+        </thead>
+
+        {% for income_statement_row in income_statement_list %}
+            <tr>
+                <td>
+                    {{ income_statement_row.income_statement_id }}
+                </td>
+                <td>
+                    {{ income_statement_row.citizen_id }}
+                </td>
+                <td>
+                    {{ income_statement_row.income }}
+                </td>
+                <td>
+                    {{ income_statement_row.expense }}
+                </td>
+                <td>
+                    {{ income_statement_row.is_citizen_suspect }}
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
